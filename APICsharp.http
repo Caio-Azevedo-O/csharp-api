@@ -1,0 +1,6 @@
+@APICsharp_HostAddress = http://localhost:5145
+
+GET {{APICsharp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
