@@ -1,5 +1,11 @@
 {
   "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "version": "8",
+      "password": "123456"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -7,5 +13,5 @@
       ]
     }
   },
-  "onCreateCommand": "dotnet tool restore && dotnet restore"
+  "postStartCommand": "dotnet tool restore && dotnet restore && dotnet tool install --global dotnet-ef"
 }
