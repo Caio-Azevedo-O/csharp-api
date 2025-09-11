@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
+  "image": "mcr.microsoft.com/dotnet/sdk:9.0-bookworm-slim",
   "features": {
     "ghcr.io/devcontainers/features/mysql:1": {
       "version": "8",
@@ -13,5 +13,5 @@
       ]
     }
   },
-  "postStartCommand": "dotnet tool restore && dotnet restore && dotnet tool install --global dotnet-ef"
+  "postStartCommand": "dotnet --version && dotnet tool restore && dotnet restore && dotnet tool install --global dotnet-ef"
 }
