@@ -1,9 +1,13 @@
 {
+  "name": "dotnet-9-mysql",
   "image": "mcr.microsoft.com/dotnet/sdk:9.0-bookworm-slim",
   "features": {
-    "ghcr.io/devcontainers/features/mysql:1": {
-      "version": "8",
-      "password": "123456"
+    "ghcr.io/devcontainers/features/mysql-server:1": {
+      "version": "8.0",
+      "mysqlDatabase": "appdb",
+      "mysqlUser": "appuser",
+      "mysqlPassword": "apppass",
+      "mysqlRootPassword": "123456"
     }
   },
   "customizations": {
